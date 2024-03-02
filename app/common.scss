@@ -1,0 +1,95 @@
+@function px($rem) {
+    @return $rem / 16 + rem;
+  }
+
+body {
+    overflow-x: hidden;
+}
+.wrap {
+    background: var(--dark-background);
+    .grid-container {
+        width: 100%;
+        max-width: px(1920);
+        margin: 0 auto;
+        > div {
+            max-height: auto;
+            aspect-ratio: 1/1;
+        }
+
+        .title {
+            width: 100%;
+            max-height: px(607);
+            background: var(--dark-background);
+            aspect-ratio: auto;
+            grid-column: 1/3;
+            svg {
+                width: 100%;
+                height: auto;
+            }
+            .portfolio-info {
+                h3 {
+                    color: var(--font-gray01);
+                    font-size: px(20);
+                }
+                > .left {
+                    border-right: 1px solid #5A5A5A;
+                    span {
+                        color: var(--font-gray02);
+                        font-size: px(16);
+                    }
+                }
+                > .right {
+                    span {
+                        color: var(--font-gray02);
+                        font-size: px(16);
+                    }
+                }
+            }
+        }
+        .tool {
+            background: var(--gray-background);
+            .inner {
+                > div {
+                    height: calc( 100% - px(45) );
+                }
+                h3 {
+                    color: var(--font-gray01);
+                    font-size: px(30);
+                    font-weight: 500;
+                    letter-spacing: px(-0.5);
+                }
+            }
+        }
+        .project-wrap {
+            .project-info {
+                h4,
+                h5 {
+                    color: var(--font-gray03);
+                    font-size: px(14);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .wrap .grid-container .title {
+        aspect-ratio: 4/1;
+    }
+    .wrap .grid-container .title .portfolio-info h3 {
+        font-size: 1rem;
+    }
+    .wrap .grid-container .title .portfolio-info > .left span,
+    .wrap .grid-container .title .portfolio-info > .right span {
+        font-size: px(14)
+    }
+}
+@media screen and (max-width: 639px) {
+    .wrap {
+        .grid-container {
+            .title {
+                grid-column: 1/1;
+            }
+        }
+    }
+}
