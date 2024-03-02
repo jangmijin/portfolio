@@ -208,7 +208,7 @@ export default function Home() {
         }}
         whileInView={{ 
           opacity: 1,
-          x: 0
+          y: 0
         }}
         exit={{
           opacity: 0,
