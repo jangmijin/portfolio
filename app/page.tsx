@@ -202,29 +202,22 @@ export default function Home() {
         </div>
         <motion.div 
         className='tool rounded-md'
-          initial={{
-            opacity: 0, 
-            rotate: '180deg',
-            scale: 0,
-            y: 0
-          }}
-          whileInView={{ 
-            opacity: 1,
-            rotate: '0deg',
-            scale: 1,
-            y: [0 , 150, -150, -150, 0]
-          }}
-          exit={{
-            opacity: 0,
-            rotate: '180deg',
-            scale: 0,
-            y: 0
-          }}
-          transition={{
-            ease: 'backInOut',
-            duration: 1,
-            times: [0, 0.25, 0.5, 0.85, 1],
-          }}
+        initial={{
+          opacity: 0, 
+          x: 100
+        }}
+        whileInView={{ 
+          opacity: 1,
+          x: 0
+        }}
+        exit={{
+          opacity: 0,
+          x: 100
+        }}
+        transition={{
+          ease: 'circOut',
+          duration: 1,
+        }}
         >
           <div className="inner p-4 h-full">
             <h3 className="lg:text-3xl sm:text-lg text-base">Available tools</h3>
