@@ -204,7 +204,7 @@ export default function Home() {
         className='tool rounded-md'
         initial={{
           opacity: 0, 
-          x: 100
+          y: -100
         }}
         whileInView={{ 
           opacity: 1,
@@ -212,7 +212,7 @@ export default function Home() {
         }}
         exit={{
           opacity: 0,
-          x: 100
+          y: -100
         }}
         transition={{
           ease: 'circOut',
