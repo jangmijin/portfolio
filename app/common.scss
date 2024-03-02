@@ -1,7 +1,20 @@
 @function px($rem) {
     @return $rem / 16 + rem;
-  }
-
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #979797;
+    border-radius: 30px;
+    background-clip: padding-box;
+    border: 0;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 30px;
+}
 body {
     overflow-x: hidden;
 }
@@ -77,7 +90,7 @@ body {
         aspect-ratio: 4/1;
     }
     .wrap .grid-container .title .portfolio-info h3 {
-        font-size: 1rem;
+        font-size: 1cm;
     }
     .wrap .grid-container .title .portfolio-info > .left span,
     .wrap .grid-container .title .portfolio-info > .right span {
